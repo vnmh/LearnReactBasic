@@ -1,19 +1,48 @@
 <!DOCTYPE html>
+<!-- Thẻ meta language: khai báo ngôn ngữ mặc định cho trang web -->
 <html lang="en">
+  <!-- Thẻ head: thường dùng trong HTML để chứa các siêu dữ liệu (metadata), thường nằm giữa thẻ <html> và <body> -->
   <head>
-    <meta charset="utf-8" />
+    <!-- Thẻ meta là những dòng mã đặt trong phần đầu <head> của trang html để cung cấp thông tin về trang web
+      cho công cụ tìm kiếm (không hiển thị lên trang web)
+      Thẻ meta phải nằm trong thẻ <head> hoặc nằm trong 512 byte đầu tiên của trang web -->
+
+      <!-- Thẻ meta content-type: dùng để xác định kiểu mã hóa kí tự của trang web -->
+    <meta charset="utf-8" /> 
+
+    <!-- Thẻ link: xác định mối quan hệ giữa 1 tài liệu HTML và các tài nguyên bên ngoài
+      Thẻ link được viết bên trong thẻ <head> -->
+    <!-- Ý nghĩa thuộc tính:
+      href: xác định địa chỉ URL của tài liệu nguồn
+      rel: miêu tả mối quan hệ giữa tài liệu hiện tại và URL đích đến -->
+    <!-- public_url: đường dẫn public của asset -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- Thẻ meta viewport: tối ưu website cho phù hợp với nhiều thiết bị.
+      Thẻ này sẽ hướng dẫn trình duyệt cách điều khiển kích thước (dimentions) cũng như tỉ lệ phóng to thu nhỏ (scaling) -->
+    <!-- Ý nghĩa 2 thuộc tính:
+      width=device-width: điều chỉnh cho khớp độ rộng màn hình với số pixel của thiệt bị
+      initial-scale=1: thiết lập tỉ lệ zoom ban đầu là 1:1 giữa pixel CSS và pixel của thiết bị -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Thẻ meta color: thay đổi màu của thanh địa chỉ/thanh công cụ -->
     <meta name="theme-color" content="#000000" />
+
+    <!-- Thẻ meta description: nêu tóm tắt nội dung của trang web -->
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
+
+    <!-- Trình duyệt Safari trên IOS chưa hỗ trợ file manifest thì sử dụng câu lệnh dưới -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+
+    <!-- Sử dụng manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -24,10 +53,17 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <!-- Thẻ title: Hiển thị trên thanh tiêu đề của trình duyệt, tên của trang web khi thêm vào bookmarks -->
+    <title>React App</title> 
+
   </head>
   <body>
+    <!-- Thẻ noscript: hiển thị nội dung thay thế nếu trình duyệt của người dùng không hỗ trợ hoặc vô hiệu hóa script -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- id="root": là 1 element mà khi react render tất cả mọi thứ biến thành DOM
+      thì nó sẽ mount và append vào trong id root -->
     <div id="root"></div>
     <!--
       This HTML file is a template.

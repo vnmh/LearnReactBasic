@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  /* StrictMode là 1 component giúp đảm bảo ứng dụng tuân theo những tiêu chuẩn phát triển đúng nhất,
+  được quản lý 1 cách nghiêm ngặt hơn về cú pháp */
   <React.StrictMode>
     <App />
   </React.StrictMode>,
